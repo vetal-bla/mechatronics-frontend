@@ -1,0 +1,10 @@
+body{
+  background: #CCCCCC;
+}
+
+.login-wrap{
+    width: 370px;
+    height: 450px;
+    background: #ffffff;
+    margin-top: 50px;
+}
