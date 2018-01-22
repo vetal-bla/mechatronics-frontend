@@ -1,0 +1,27 @@
+.center{
+    margin-top: 75px;
+}
+.login-wrap{
+    width: 370px;
+    height: 450px;
+    background: #ffffff;
+}
+
+.login-page-image img{
+    width: 270px;
+    height: 450px;
+}
+
+.login-logo img{
+    width: 267px;
+    height: 150px;
+    margin-top: 70px;
+}
+
+.phone-icon{
+    position: relative;
+    display: inline-block;
+}
+.number-input{
+    margin-top: 20px;
+}
