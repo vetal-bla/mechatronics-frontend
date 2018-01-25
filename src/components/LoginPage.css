@@ -5,6 +5,7 @@
     width: 370px;
     height: 450px;
     background: #ffffff;
+    padding-left: 0 !important;
 }
 
 .login-page-image img{
@@ -13,9 +14,8 @@
 }
 
 .login-logo img{
-    width: 267px;
-    height: 150px;
-    margin-top: 70px;
+    width: 120px;
+    margin-top: 20px;
 }
 
 .phone-icon{
