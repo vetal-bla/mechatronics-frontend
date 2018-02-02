@@ -8,8 +8,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import {BrowserRouter} from 'react-router-dom'
 
 ReactDOM.render(
-    <BrowserRouter>
+	<BrowserRouter>
         <App/>
     </BrowserRouter>
-    , document.getElementById('root'));
+    , document.getElementById('root')
+);
+module.hot.accept();
 registerServiceWorker();
