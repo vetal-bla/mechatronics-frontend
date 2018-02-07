@@ -4,6 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { createMuiTheme } from 'material-ui/styles';
 import LoginPage from '../components/LoginPage';
 import NotFound from '../components/NotFound'
+import SignUpPage from '../components/SignUpPage'
 import {Route, Switch} from 'react-router-dom';
 import Reboot from 'material-ui/Reboot';
 
@@ -14,7 +15,7 @@ const theme = createMuiTheme({
             light: '#52c7b8',
             main: '#009688',
             dark: '#00675b',
-            contrastText: '#000000',
+            contrastText: '#ffffff',
         },
         secondary: {
             light: '#fff350',
@@ -45,6 +46,7 @@ class App extends Component {
                 <MuiThemeProvider theme={theme}>
                     <Switch>
                         <Route path="/login" component={LoginPage}/>
+                        <Route path='/signup' component={SignUpPage}/>
                         <Route path="/test" component={Test}/>
                         <Route path="/" exct component={Home}/>
                         <Route component={NotFound}/>
