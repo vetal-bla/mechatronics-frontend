@@ -18,14 +18,14 @@ module.exports = {
         use: [ 'style-loader', 'css-loader' ]
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(ico|svg|png|jpg|gif)$/,
         use: [
           {
             loader: 'file-loader',
             options: {}  
           }
         ]
-      }
+      },
     ],
     loaders: [
       {
@@ -52,7 +52,7 @@ module.exports = {
     })
   ],
   devServer: {
-    port: 8080,
+    port: 8088,
     contentBase: __dirname + "/public",
     hot: true,
     historyApiFallback: true,
