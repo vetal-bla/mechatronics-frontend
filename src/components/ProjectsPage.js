@@ -1,0 +1,79 @@
+import React from 'react'
+import PropTypes from 'prop-types'
+import NavDrawer from './NavDrawer'
+import { DRAWER_WIDTH } from './NavDrawer'
+import { withStyles } from 'material-ui'
+import AppBar from 'material-ui/AppBar'
+import Toolbar from 'material-ui/Toolbar'
+import Typography from 'material-ui/Typography'
+import Paper from 'material-ui/Paper'
+
+const styles = theme => ({
+	root: {
+		width: '100%',
+		height: '100%',
+		overflow: 'hidden',
+	  },
+	appFrame: {
+		position: 'absolute',
+		display: 'flex',
+		width: '100%',
+		height: '100%',
+	  },
+	  appBar: {
+		position: 'absolute',
+		width: `calc(100% - ${DRAWER_WIDTH}px)`,
+	  },
+	  'appBar-left': {
+		marginLeft: DRAWER_WIDTH,
+	  },
+	  content: {
+		backgroundColor: theme.palette.background,
+		width: '100%',
+		padding: theme.spacing.unit * 3,
+		height: 'calc(100% - 56px)',
+		marginTop: 56,
+		[theme.breakpoints.up('sm')]: {
+		  height: 'calc(100% - 64px)',
+		  marginTop: 64,
+		},
+	  },
+});
+
+class ProjectsPage extends React.Component{
+	render(){
+		const { classes } = this.props;
+		console.log(DRAWER_WIDTH);
+		return(
+				<div className={classes.root}>
+				<div className={classes.appFrame}>
+				  <AppBar className={classes.appBar}>
+					<Toolbar>
+					  <Typography variant="title" color="inherit" noWrap>
+						Projects
+					  </Typography>
+					</Toolbar>
+				  </AppBar>
+				  <NavDrawer />
+				  <main className={classes.content}>
+					<Typography>{'projects page must be'}</Typography>
+					<Paper
+						width='120px'
+
+					>
+						YEPPP!!!
+					</Paper>
+					<div>
+						fdsfdsfsd!!!!!!!!!!!!!!!!
+					</div>
+				  </main>
+				</div>
+			  </div>	
+		);
+	}
+}
+ProjectsPage.propTypes = {
+	classes: PropTypes.object.isRequired,
+  };
+
+export default withStyles(styles)(ProjectsPage);

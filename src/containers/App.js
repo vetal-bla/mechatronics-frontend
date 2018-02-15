@@ -6,6 +6,7 @@ import LoginPage from '../components/LoginPage';
 import NotFound from '../components/NotFound'
 import SignUpPage from '../components/SignUpPage'
 import {Route, Switch} from 'react-router-dom';
+import ProjectsPage from '../components/ProjectsPage';
 import Reboot from 'material-ui/Reboot';
 
 //move to components
@@ -45,6 +46,7 @@ class App extends Component {
             <Reboot/>
                 <MuiThemeProvider theme={theme}>
                     <Switch>
+                        <Route path="/projects" component={ProjectsPage}/>
                         <Route path="/login" component={LoginPage}/>
                         <Route path='/signup' component={SignUpPage}/>
                         <Route path="/test" component={Test}/>
