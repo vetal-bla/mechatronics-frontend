@@ -1,6 +1,6 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import ToolBar from 'material-ui/Toolbar';
+import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid'
 import { withStyles } from 'material-ui/styles';
@@ -12,6 +12,10 @@ const styles = theme => ({
   root:{
     width: '100%'
   },
+  appBar: {
+		position: 'absolute',
+		width: `100%`,
+	  },
   centerLogin:{
     marginTop: '80px',
     height: '450px',
@@ -46,13 +50,13 @@ class LoginPage extends React.Component {
     const { classes } = this.props;
     return(
       <div>
-            <AppBar position = 'static'>
-            <ToolBar>
-            <Typography type="title" color="inherit">
-            mechatronics
-          </Typography>
-            </ToolBar>
-            </AppBar>
+             <AppBar className={classes.appBar}>
+					<Toolbar>
+					  <Typography variant="title" color="inherit" noWrap>
+						MECHATRONICS
+					  </Typography>
+					</Toolbar>
+				  </AppBar>
             <Grid container className={classes.root}>
               <Grid item xs={12}>
                 <Grid

@@ -9,7 +9,7 @@
 }
 
 img{
-    width: 270px;
+    width: inherit;
     height: 450px;
 }
 

@@ -6,6 +6,7 @@ import { withStyles } from 'material-ui'
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
+import Paper from 'material-ui/Paper'
 
 const styles = theme => ({
 	root: {
@@ -27,9 +28,8 @@ const styles = theme => ({
 		marginLeft: DRAWER_WIDTH,
 	  },
 	  content: {
-		marginLeft: '10%',
 		backgroundColor: theme.palette.background,
-		width: '60%',
+		width: '100%',
 		padding: theme.spacing.unit * 3,
 		height: 'calc(100% - 56px)',
 		marginTop: 56,
@@ -40,10 +40,33 @@ const styles = theme => ({
 	  },
 	  card:{
 		  width: ''
+      },
+      orderf:{
+          display: 'inline-block',
+          marginRight: '10px'
+      },
+      orders:{
+        display: 'inline-block',
+        marginRight: '0'
 		},
+		button: {
+			margin: 0,
+			top: 'auto',
+			right: 20,
+			bottom: 20,
+			left: 'auto',
+			position: 'fixed',
+	},
+    paper:{
+			marginLeft: '10%',
+			width: '650px'
+		},
+		textField:{
+			margin: '10px'
+		}  
 });
 
-class ProjectsPage extends React.Component{
+class OrdersPage extends React.Component{
 	render(){
 		const { classes } = this.props;
 		return(
@@ -52,7 +75,7 @@ class ProjectsPage extends React.Component{
 				  <AppBar className={classes.appBar}>
 					<Toolbar>
 					  <Typography variant="title" color="inherit" noWrap>
-						Projects
+						Orders
 					  </Typography>
 					</Toolbar>
 				  </AppBar>
@@ -60,12 +83,13 @@ class ProjectsPage extends React.Component{
 				  <main className={classes.content}>
 				  </main>
 				</div>
+				
 			  </div>	
 		);
 	}
 }
-ProjectsPage.propTypes = {
+OrdersPage.propTypes = {
 	classes: PropTypes.object.isRequired,
   };
 
-export default withStyles(styles)(ProjectsPage);
+export default withStyles(styles)(OrdersPage);

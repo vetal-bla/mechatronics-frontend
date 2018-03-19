@@ -1,12 +1,12 @@
 import * as firebase from 'firebase'
 
 const prodConfig = {
-    apiKey: "AIzaSyAYpYCeEwEJXDr9-FXVpVLkvuDtP_cnNCY",
-    authDomain: "mechatronics-frontend.firebaseapp.com",
-    databaseURL: "https://mechatronics-frontend.firebaseio.com",
-    projectId: "mechatronics-frontend",
-    storageBucket: "mechatronics-frontend.appspot.com",
-    messagingSenderId: "51254523853",
+    apiKey: "AIzaSyCD2RnJlOxRAaZd5DFiCdAleIwS9syJJR8",
+    authDomain: "fir-mechatronics.firebaseapp.com",
+    databaseURL: "https://fir-mechatronics.firebaseio.com",
+    projectId: "firebase-mechatronics",
+    storageBucket: "firebase-mechatronics.appspot.com",
+    messagingSenderId: "1070019120231",
 };
 
 const devConfig = {
@@ -30,7 +30,7 @@ const auth = firebase.auth();
 
 const uiConfig = {
     signInFlow: 'popup',
-    signInSuccessUrl: '/home',
+    signInSuccessUrl: '/user',
     signInOptions: [
         {
             provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
@@ -40,6 +40,7 @@ const uiConfig = {
             defaultCountry: 'UA',
         }]
 }
+
 export {
     auth,
     uiConfig,

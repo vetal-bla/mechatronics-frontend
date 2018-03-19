@@ -6,6 +6,8 @@ import { withStyles } from 'material-ui'
 import AppBar from 'material-ui/AppBar'
 import Toolbar from 'material-ui/Toolbar'
 import Typography from 'material-ui/Typography'
+import Paper from 'material-ui/Paper'
+import { auth } from '../firebase/firebase';
 
 const styles = theme => ({
 	root: {
@@ -40,10 +42,29 @@ const styles = theme => ({
 	  },
 	  card:{
 		  width: ''
+			},
+			button: {
+				margin: 0,
+				top: 'auto',
+				right: 20,
+				bottom: 20,
+				left: 'auto',
+				position: 'fixed',
 		},
+		event:{
+			marginLeft: '15%',
+			height: '125px',
+			display: 'block'
+	},
 });
 
-class ProjectsPage extends React.Component{
+class EventsPage extends React.Component{
+	state = {display: 'block', secdis: 'none'}
+	toggle= () =>{
+		console.log(this.state);
+		this.setState({display: 'none'})
+		this.setState({secdis: 'block'})
+	}
 	render(){
 		const { classes } = this.props;
 		return(
@@ -52,7 +73,7 @@ class ProjectsPage extends React.Component{
 				  <AppBar className={classes.appBar}>
 					<Toolbar>
 					  <Typography variant="title" color="inherit" noWrap>
-						Projects
+						Events
 					  </Typography>
 					</Toolbar>
 				  </AppBar>
@@ -64,8 +85,8 @@ class ProjectsPage extends React.Component{
 		);
 	}
 }
-ProjectsPage.propTypes = {
+EventsPage.propTypes = {
 	classes: PropTypes.object.isRequired,
   };
 
-export default withStyles(styles)(ProjectsPage);
+export default withStyles(styles)(EventsPage);

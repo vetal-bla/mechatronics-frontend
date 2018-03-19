@@ -27,7 +27,7 @@ const styles = theme => ({
 		marginLeft: DRAWER_WIDTH,
 	  },
 	  content: {
-		marginLeft: '10%',
+		marginLeft: '5%',
 		backgroundColor: theme.palette.background,
 		width: '60%',
 		padding: theme.spacing.unit * 3,
@@ -40,10 +40,11 @@ const styles = theme => ({
 	  },
 	  card:{
 		  width: ''
-		},
+      },
+      
 });
 
-class ProjectsPage extends React.Component{
+class UserPage extends React.Component{
 	render(){
 		const { classes } = this.props;
 		return(
@@ -52,7 +53,7 @@ class ProjectsPage extends React.Component{
 				  <AppBar className={classes.appBar}>
 					<Toolbar>
 					  <Typography variant="title" color="inherit" noWrap>
-						Projects
+						John Doe
 					  </Typography>
 					</Toolbar>
 				  </AppBar>
@@ -64,8 +65,8 @@ class ProjectsPage extends React.Component{
 		);
 	}
 }
-ProjectsPage.propTypes = {
+UserPage.propTypes = {
 	classes: PropTypes.object.isRequired,
   };
 
-export default withStyles(styles)(ProjectsPage);
+export default withStyles(styles)(UserPage);

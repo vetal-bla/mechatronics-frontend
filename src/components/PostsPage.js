@@ -40,10 +40,14 @@ const styles = theme => ({
 	  },
 	  card:{
 		  width: ''
-		},
+			},
+			post:{
+				marginLeft: '10%',
+				height: 'auto'
+			}
 });
 
-class ProjectsPage extends React.Component{
+class PostsPage extends React.Component{
 	render(){
 		const { classes } = this.props;
 		return(
@@ -52,7 +56,7 @@ class ProjectsPage extends React.Component{
 				  <AppBar className={classes.appBar}>
 					<Toolbar>
 					  <Typography variant="title" color="inherit" noWrap>
-						Projects
+						Posts
 					  </Typography>
 					</Toolbar>
 				  </AppBar>
@@ -64,8 +68,8 @@ class ProjectsPage extends React.Component{
 		);
 	}
 }
-ProjectsPage.propTypes = {
+PostsPage.propTypes = {
 	classes: PropTypes.object.isRequired,
   };
 
-export default withStyles(styles)(ProjectsPage);
+export default withStyles(styles)(PostsPage);

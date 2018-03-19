@@ -5,9 +5,15 @@ import { createMuiTheme } from 'material-ui/styles';
 import LoginPage from '../components/LoginPage';
 import NotFound from '../components/NotFound'
 import SignUpPage from '../components/SignUpPage'
+import EventsPage from '../components/EventsPage'
+import PrintsPage from '../components/PrintsPage'
+import PostsPage from '../components/PostsPage'
+import StaffPage from '../components/StaffPage'
 import {Route, Switch} from 'react-router-dom';
 import ProjectsPage from '../components/ProjectsPage';
 import Reboot from 'material-ui/Reboot';
+import OrdersPage from '../components/OrdersPage'
+import UserPage from '../components/UserPage'
 
 //move to components
 const theme = createMuiTheme({
@@ -40,7 +46,6 @@ const Home = () => (
 
 class App extends Component {
     render() {
-        console.log('QQQQQQQQQQQQQQQq');
         return (
             <div className="App">
             <Reboot/>
@@ -49,7 +54,12 @@ class App extends Component {
                         <Route path="/projects" component={ProjectsPage}/>
                         <Route path="/login" component={LoginPage}/>
                         <Route path='/signup' component={SignUpPage}/>
-                        <Route path="/test" component={Test}/>
+                        <Route path="/prints" component={PrintsPage}/>
+                        <Route path="/posts" component={PostsPage}/>
+                        <Route path="/events" component={EventsPage}/>
+                        <Route path="/staff" component={StaffPage}/>
+                        <Route path="/orders" component={OrdersPage}/>
+                        <Route path="/user" component={UserPage}/>
                         <Route path="/" exct component={Home}/>
                         <Route component={NotFound}/>
                     </Switch>

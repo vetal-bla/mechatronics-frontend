@@ -6,6 +6,7 @@ import Drawer from 'material-ui/Drawer';
 import { MenuItem, MenuList } from 'material-ui/Menu';
 import { ListItemIcon, ListItemText } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
+import {Link} from 'react-router-dom';
 import { Wrench, Cart, Printer3D, LibraryBooks, Clock, AccountMultiplePlus, AccountMultiple } from 'mdi-material-ui'
 
 export const DRAWER_WIDTH = 240;
@@ -43,48 +44,62 @@ class NavDrawer extends React.Component {
       <div className={classes.drawerHeader} />
       <Divider />
       <MenuList>
+        <Link to="/projects">
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
             <Wrench />
             </ListItemIcon>
           <ListItemText classes={{ primary: classes.primary }} inset primary="Projects" />
         </MenuItem>
+        </Link>
+        <Link to="/orders">
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
             <Cart />
             </ListItemIcon>
           <ListItemText classes={{ primary: classes.primary }} inset primary="Orders" />
         </MenuItem>
+        </Link>
+        <Link to="/prints">
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
             <Printer3D />
             </ListItemIcon>
           <ListItemText classes={{ primary: classes.primary }} inset primary="Prints" />
         </MenuItem>
+        </Link>
+        <Link to="/posts">
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
             <LibraryBooks />
             </ListItemIcon>
           <ListItemText classes={{ primary: classes.primary }} inset primary="Posts" />
         </MenuItem>
+        </Link>
+        <Link to="/events">
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
             <Clock />
             </ListItemIcon>
           <ListItemText classes={{ primary: classes.primary }} inset primary="Events" />
         </MenuItem>
+        </Link>
+        <Link to="/newpeople">
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
             <AccountMultiplePlus />
             </ListItemIcon>
           <ListItemText classes={{ primary: classes.primary }} inset primary="New people" />
         </MenuItem>
+        </Link>
+        <Link to="/staff">
         <MenuItem className={classes.menuItem}>
           <ListItemIcon className={classes.icon}>
             <AccountMultiple/>
             </ListItemIcon>
           <ListItemText classes={{ primary: classes.primary }} inset primary="Staff" />
         </MenuItem>
+        </Link>
       </MenuList>
     </Drawer>
     );
